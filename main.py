@@ -1,7 +1,9 @@
+#!/usr/bin/python3
+
 import random
 import sys
 
-def generate(arg):
+def generate(arg: str) -> None:
     print(random.randint(1, arg))
 
 if __name__ == '__main__':
