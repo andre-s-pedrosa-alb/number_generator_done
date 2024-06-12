@@ -3,8 +3,12 @@
 import random
 import sys
 
-def generate(args: list[str]) -> None:
-    print(random.randint(1, args[0]))
+def generate(arg: str) -> None:
+    print(random.randint(1, arg))
 
 if __name__ == '__main__':
-    generate(sys.argv[1:])
+    if len(sys.argv) != 2:
+        print(f"Usage: {sys.argv[0]} MAX_RANGE", file=sys.stderr)
+        sys.exit(1)
+
+    generate(sys.argv[1])
