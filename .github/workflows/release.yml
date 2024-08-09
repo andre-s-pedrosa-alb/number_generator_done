@@ -14,5 +14,5 @@ jobs:
       - uses: actions/checkout@v4
 
       - run: |
-          git tag 2.3.4
+          git tag ${{ insputs.release }}
           git push --tags
