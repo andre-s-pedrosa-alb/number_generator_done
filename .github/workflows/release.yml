@@ -2,6 +2,10 @@ name: Create Release
 
 on:
   workflow_dispatch:
+    inputs:
+      release:
+        type: string
+        required: true
 
 jobs:
   release:
