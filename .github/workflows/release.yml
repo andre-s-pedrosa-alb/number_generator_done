@@ -9,7 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions-ecosystem/action-push-tag@v1
-        with:
-          tag: ya
-          message: "cenas"
+      - run: |
+          git tag 2.3.4
+          git push --tags
